@@ -13,7 +13,7 @@ import bkg1_front from "./img/skybox/bkg1_front.png";
 let scene, camera, composer, icosahedron, renderer, loadingManager = null;
 let icosahedron_baserotation = 0;
 
-const orbiterCenter = new THREE.Vector3(-300, 20, 200);
+const orbiterCenter = new THREE.Vector3(-270, 20, 170);
 const orbitRadius = 50;
 const orbiterCount = 60;
 const sunComponentCount = 10;
