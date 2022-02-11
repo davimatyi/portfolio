@@ -1,23 +1,19 @@
-# abort on errors
-
-# build
+Write-Host "Building project..."
 npm run build
 
-# navigate into the build output directory
 Set-Location dist
 
-# if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
-
+Write-Host "Setting up repository..."
 git init
 git add -A
 git commit -m 'deploy'
 
-# if you are deploying to https://<USERNAME>.github.io
+Write-Host "Pushing to github pages repo..."
 git push -f https://github.com/davimatyi/davimatyi.github.io.git master
 
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:<USERNAME>/<REPO>.git main:gh-pages
-
+Write-Host "Removing git repo..."
 Remove-Item -Recurse -Force .git
+
 Set-Location ..
+
+Write-Host "Done"
